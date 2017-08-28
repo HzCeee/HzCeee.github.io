@@ -1,11 +1,11 @@
 # Site settings
 title: HzCeee | Blog
-#description: "A minimal, responsive, ready to use blog template, built with Jekyll."
+description: "A minimal, responsive, ready to use blog template, built with Jekyll."
 url: "https://github.com/HzCeee"
-#author:
-#  name: "The Review Index"
-#  email: "dyutibarma@gmail.com"
-#  url: "https://thereviewindex.com"
+author:
+  name: "The Review Index"
+  email: "dyutibarma@gmail.com"
+  url: "https://thereviewindex.com"
 
 # Build settings
 baseurl: . # Change this to your relative path (ex: /blog/), or leave just a /
