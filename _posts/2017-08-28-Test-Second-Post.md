@@ -3,7 +3,7 @@ layout: post
 title: "Test Second Post"
 author: "author"
 categories: temp
-tags: [tags]
+tags: [temp]
 image:
   feature: bag.jpg
   teaser: bag-teaser.jpg
