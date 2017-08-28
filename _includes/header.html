@@ -1,26 +1,7 @@
-<header id="header" class="parent justify-spaceBetween">
-  <div class="inner w100 relative">
-    <span class="f-left">  
-      <a href="{{ site.baseurl }}/">
-        <h1>
-          <span>mono</span>chrome
-        </h1>
-      </a>
-    </span>
-    <span id="nav-links" class="absolute right bottom">
-      <!-- Nav pages -->
-	    {% for page in site.pages %}
-	      {% if page.layout == "page" %}
-	        <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>
-	      {% endif %}
-	    {% endfor %}
-      
-      <!-- Nav links -->
-	    {% include link.html %}
-
-    </span>
-  </div>
+<header class="masthead">
+  <h3 class="masthead-title">
+    <a href="{{ site.github.url }}/">{{ site.data.settings.title }}</a>
+    <small class="masthead-subtitle">{{ site.data.settings.tagline }}</small>
+    {% include menu.html %}
+  </h3>
 </header>
-
-
-

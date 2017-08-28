@@ -1,39 +1,16 @@
-# Site settings
-title: HzCeee | Blog
-description: "A minimal, responsive, ready to use blog template, built with Jekyll."
-url: "https://github.com/HzCeee"
-author:
-  name: "The Review Index"
-  email: "dyutibarma@gmail.com"
-  url: "https://thereviewindex.com"
+# Site Settings
+
+paginate:            5
 
 # Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
-markdown: kramdown
-source: .
-destination: ./_site
-permalink: /:title
-paginate: 8
-paginate_path: /page:num/
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed]
 
-# Default values
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# feed settings
+title:		     "{{ site.data.settings.title }} | {{ site.data.settings.tagline }}"
 
-# Plugins
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-
-# Custom variables
-version: "1.0.0"
-
-# Options
-custom_header: false
-custom_nav_footer: false
-reverse: false
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#   path:	     rss-feed.xml
