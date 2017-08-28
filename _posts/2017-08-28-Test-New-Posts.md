@@ -11,3 +11,6 @@ image:
   creditlink:
 ---
 
+# Test new post
+
+Test new post!
