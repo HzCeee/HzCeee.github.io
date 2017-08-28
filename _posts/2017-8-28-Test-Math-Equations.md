@@ -1,9 +1,12 @@
 # Support Vector Machine
-Introduce a new notation for SVM: use $y \in \{ -1, 1 \}$ instead of $\{ 0, 1 \}$, let $w = [\theta_1, \theta_2, \cdots, \theta_n]^T$ and $b = \theta_0$. Thus,
+Introduce a new notation for SVM: use \( y \in \{ -1, 1 \} \)instead of \( \{ 0, 1 \} \), let \( w = [\theta_1, \theta_2, \cdots, \theta_n]^T \) and \(b = \theta_0\). Thus,
+
 $$
 h_{\theta}(x) = h_{w,b}(x) = g(w^T x + b)
 $$
+
 where
+
 $$
 g(z) = 
 \begin{cases}
@@ -11,6 +14,7 @@ g(z) =
 0 & \text{otherwise}
 \end{cases}
 $$
+
 ## Functional and Geometric Margins
 ### Functional Margins
 Given a training example $(x^{(i)} , y^{(i)})$, the functional margin of $(w,b)$ with respect to the training example is:
