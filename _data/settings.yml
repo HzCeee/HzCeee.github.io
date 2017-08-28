@@ -14,7 +14,7 @@ google-ID: 'UA-80213386-1'
 menu:
 - {name: 'About', url: 'about.html'}
 - {name: 'Writing', url: 'writing.html'}
-- {name: 'Contact', url: 'contact.html'}
+#- {name: 'Contact', url: 'contact.html'}
 
 social:
 - {icon: 'github', link: 'https://www.github.com/HzCeee'}
