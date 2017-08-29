@@ -5,8 +5,8 @@ author: "HzCeee"
 categories: Machine Learning
 tags: [Nerual Network]
 image:
-  feature: 
-  teaser: 
+  feature: neural-network.jpg
+  teaser: neural-network-teaser.jpg
   credit:
   creditlink:
 ---
