@@ -1,4 +1,4 @@
-# Flag 5
+# Flag 6
 # Support Vector Machine
 $A \cdot B$
 
@@ -41,7 +41,7 @@ $$
 \overrightarrow{BA} // \vec{w}
 $$
 
-Therefore $B$ is given by $x^{(i)} - \gamma^{(i)} \cdot w / ||w||$ . Hence,
+Therefore $B$ is given by $x^{(i)} - \gamma^{(i)} \cdot w / \| w \|$ . Hence,
 
 $$
 w^T (x^{(i)} - \gamma^{(i)} \frac{w}{||w||}) + b = 0
@@ -53,7 +53,7 @@ $$
 \gamma^{(i)} = (\frac{w}{||w||})^T x^{(i)} + \frac{b}{||w||}
 $$
 
-Similarly, use point $A$ to represent $x^{(i)}$ on the negative side, therefore $B$ is the same point as mentioned above. Therefore $B$ is given by $x^{(i)} + \gamma^{(i)} \cdot w / ||w||$ . Hence,
+Similarly, use point $A$ to represent $x^{(i)}$ on the negative side, therefore $B$ is the same point as mentioned above. Therefore $B$ is given by $x^{(i)} + \gamma^{(i)} \cdot w / \| w \|$ . Hence,
 
 $$
 w^T (x^{(i)} + \gamma^{(i)} \frac{w}{||w||}) + b = 0
