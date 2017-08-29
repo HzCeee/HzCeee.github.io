@@ -2,7 +2,7 @@
 # Support Vector Machine
 $A \cdot B$
 
-Introduce a new notation for SVM: use $y \in \{ -1, 1 \}$ instead of $\{ 0, 1 \}$, let $w = [\theta_1, \theta_2, \cdots, \theta_n]^T$ and $b = \theta_0$. Thus,
+Introduce a new notation for SVM: use $y \in \\{ -1, 1 \\}$ instead of $\\{ 0, 1 \\}$, let $w = [\theta_1, \theta_2, \cdots, \theta_n]^T$ and $b = \theta_0$. Thus,
 
 $$
 h_{\theta}(x) = h_{w,b}(x) = g(w^T x + b)
@@ -41,7 +41,7 @@ $$
 \overrightarrow{BA} // \vec{w}
 $$
 
-Therefore $B$ is given by $x^{(i)} - \gamma^{(i)} \cdot w / \| w \|$ . Hence,
+Therefore $B$ is given by $x^{(i)} - \gamma^{(i)} \cdot w / \\| w \\|$ . Hence,
 
 $$
 w^T (x^{(i)} - \gamma^{(i)} \frac{w}{||w||}) + b = 0
@@ -53,7 +53,7 @@ $$
 \gamma^{(i)} = (\frac{w}{||w||})^T x^{(i)} + \frac{b}{||w||}
 $$
 
-Similarly, use point $A$ to represent $x^{(i)}$ on the negative side, therefore $B$ is the same point as mentioned above. Therefore $B$ is given by $x^{(i)} + \gamma^{(i)} \cdot w / \| w \|$ . Hence,
+Similarly, use point $A$ to represent $x^{(i)}$ on the negative side, therefore $B$ is the same point as mentioned above. Therefore $B$ is given by $x^{(i)} + \gamma^{(i)} \cdot w / \\| w \\|$ . Hence,
 
 $$
 w^T (x^{(i)} + \gamma^{(i)} \frac{w}{||w||}) + b = 0
