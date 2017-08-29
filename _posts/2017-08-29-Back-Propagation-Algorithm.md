@@ -19,7 +19,7 @@ $$
 
 where $m$ is the number of training set, $L$ is the number of layers in network and $S_L$ is the number of neurons in the layer $L$.
 
-Define $\delta^{(l)}_i = \frac{\partial J(\Theta)}{\partial z^{(l)}_{i}}$, $\Delta_{ij}^ l= \frac{\partial J(\Theta)}{\partial \Theta^{(l)}_{ij}} $, $z^{(l)}_i$ and $a^{(l)}_i = g(z^{(l)}_i)$ are the input and output of the neuron $i$ in layer $l$ respectively. Thus, to minimize $J(\Theta)$, use the gradient descent algorithm to update weights $\Theta$:
+Define $\delta_i^{(l)} = \frac{\partial J(\Theta)}{\partial z_i^{(l)}} $, $\Delta_{ij}^l= \frac{\partial J(\Theta)}{\partial \Theta^{(l)}_{ij}} $, $z^{(l)}_i$ and $a^{(l)}_i = g(z^{(l)}_i)$ are the input and output of the neuron $i$ in layer $l$ respectively. Thus, to minimize $J(\Theta)$, use the gradient descent algorithm to update weights $\Theta$:
 
 $$
 \begin{aligned}
@@ -34,7 +34,7 @@ where $\delta_i^{(l)}$ can be computed as:
 
 $$
 \begin{aligned}
-\delta^{(l)}\_i 
+\delta_i^{(l)}
 &= \frac{\partial J(\Theta)}{\partial z^{(l)}_{i}} \\\\
 &= \frac{\partial J(\Theta)}{\partial a^{(l)}_i} \frac{\partial a^{(l)}_i}{\partial z^{(l)}_i} \\\\
 &= \sum_{j = 1}^{S_{l + 1}} \left[\frac{\partial J(\Theta)}{\partial z^{(l + 1)}_j} \frac{\partial z^{(l + 1)}_j}{\partial a^{(l)}_i} \right] \cdot
