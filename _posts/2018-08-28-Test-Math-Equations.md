@@ -1,4 +1,4 @@
-# Flag 4
+# Flag 5
 # Support Vector Machine
 Introduce a new notation for SVM: use $y \in \{ -1, 1 \}$ instead of $\{ 0, 1 \}$, let $w = [\theta_1, \theta_2, \cdots, \theta_n]^T$ and $b = \theta_0$. Thus,
 
