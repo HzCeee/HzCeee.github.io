@@ -1,3 +1,16 @@
+---
+layout: post
+title: "Back Propagation Algorithm"
+author: "HzCeee"
+categories: Machine Learning
+tags: [Nerual Network]
+image:
+  feature: 
+  teaser: 
+  credit:
+  creditlink:
+---
+
 In logistic regression, the cost function without regularization term is:
 
 $$
