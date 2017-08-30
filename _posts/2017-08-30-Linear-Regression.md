@@ -32,31 +32,31 @@ Define the design matrix $X$ to be $m$-by-$n + 1$:
 
 $$
 X =
-\begin{bmatrix}
+\begin{matrix}
 x^{(1)}_0 & x^{(1)}_1 & \cdots & x^{(1)}_n \\\\
 x^{(2)}_0 & x^{(2)}_1 & \cdots & x^{(2)}_n \\\\
 \vdots \\\\
 x^{(m)}_0 & x^{(m)}_1 & \cdots & x^{(m)}_n \\\\
-\end{bmatrix}
+\end{matrix}
 =
-\begin{bmatrix}
+\begin{matrix}
 (x^{(1)})^T \\\\
 (x^{(2)})^T \\\\
 \vdots \\\\
 (x^{(m)})^T \\\\
-\end{bmatrix}
+\end{matrix}
 $$
 
 Also, let $\overrightarrow{y}$ be the $m$-dimensional vector:
 
 $$
 \overrightarrow{y} = 
-\begin{bmatrix}
+\begin{matrix}
 y^{(1)} \\\\
 y^{(2)} \\\\
 \vdots \\\\
 y^{(m)} \\\\
-\end{bmatrix}
+\end{matrix}
 $$
 
 Assume
@@ -145,26 +145,26 @@ Since $h_{\theta}(x^{(i)}) = \sum_{j = 0}^{n} \theta_j x_j^{(i)} = (x^{(i)})^T \
 $$
 \begin{aligned}
 X \theta - \overrightarrow{y} &= 
-\begin{bmatrix}
+\begin{matrix}
 (x^{(1)})^T \theta \\\\
 (x^{(2)})^T \theta \\\\
 \vdots \\\\
 (x^{(m)})^T \theta \\\\
-\end{bmatrix}
+\end{matrix}
 -
-\begin{bmatrix}
+\begin{matrix}
 y^{(1)} \\\\
 y^{(2)} \\\\
 \vdots \\\\
 y^{(m)} \\\\
-\end{bmatrix} \\\\
+\end{matrix} \\\\
 &=
-\begin{bmatrix}
+\begin{matrix}
 h_{\theta}(x^{(1)}) - y^{(1)} \\\\
 h_{\theta}(x^{(2)}) - y^{(2)} \\\\
 \vdots \\\\
 h_{\theta}(x^{(m)}) - y^{(m)} \\\\
-\end{bmatrix}
+\end{matrix}
 \end{aligned}
 $$
 
