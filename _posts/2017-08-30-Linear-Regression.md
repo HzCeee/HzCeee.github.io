@@ -11,7 +11,7 @@ image:
   creditlink:
 ---
 
-Given a training set with $m$ training examples $\{ (x^{(i)}, y^{(i)}); i = 1, \cdots , m \}$ where $x^{(i)} = (x_1^{(i)}, x_2^{(i)}, \cdots , x_n^{(i)})^T$ and $y^{(i)}$ denotes the target variable, to learn a function $h : \mathcal{X} \mapsto \mathcal{Y}$ so that $h(x)$ is a good predictor for the corresponding value of $y$.
+Given a training set with $m$ training examples $\\{ (x^{(i)}, y^{(i)}); i = 1, \cdots , m \\}$ where $x^{(i)} = (x_1^{(i)}, x_2^{(i)}, \cdots , x_n^{(i)})^T$ and $y^{(i)}$ denotes the target variable, to learn a function $h : \mathcal{X} \mapsto \mathcal{Y}$ so that $h(x)$ is a good predictor for the corresponding value of $y$.
 
 Approximate $y$ as a linear function of $x$, then
 
