@@ -32,7 +32,7 @@ $$
 
 where $m$ is the number of training set, $L$ is the number of layers in network and $S_L$ is the number of neurons in the layer $L$.
 
-Define $\delta_i^{(l)} = \frac{\partial J(\Theta)}{\partial z_i^{(l)}} $, $\Delta_{ij}^{(l)}= \frac{\partial J(\Theta)}{\partial \Theta^{(l)}_{ij}} $, $z^{(l)}_i$ and $a^{(l)}_i = g(z^{(l)}_i)$ are the input and output of the neuron $i$ in layer $l$ respectively. Thus, to minimize $J(\Theta)$, use the gradient descent algorithm to update weights $\Theta$:
+Define $\delta_i^{(l)} = \frac{\partial J(\Theta)}{\partial z_i^{(l)}} = \sum_{j = 1}^m \delta_i^{(l,j)} = \sum_{j = 1}^m  \frac{\partial J(\Theta)}{\partial z_i^{(l,j)}}$, $\Delta_{ij}^{(l)}= \frac{\partial J(\Theta)}{\partial \Theta^{(l)}_{ij}} $, $z^{(l)}_i$ and $a^{(l)}_i = g(z^{(l)}_i)$ are the input and output of the neuron $i$ in layer $l$ respectively. Thus, to minimize $J(\Theta)$, use the gradient descent algorithm to update weights $\Theta$:
 
 $$
 \begin{aligned}
@@ -76,3 +76,58 @@ $$
 $$
 
 and $\delta^{(l)}$ can be computed backwards from $\delta^{(L)}$ by $\delta^{(l)} = (\Theta^{(l)})^T \delta^{(l + 1)} \odot g'(z^{(l)})$.
+
+Specifically, when $g(z)$ is a sigmoid function where
+
+$$
+g(z) = \frac{1}{1 + e^{-z}}
+$$
+
+so that
+
+$$
+\begin{aligned}
+g'(z) &= - \frac{1}{(1 + e^{-z})^2} \cdot - e^{-z} \\\\
+&= \frac{e^{-z} + 1 - 1}{(1 + e^{-z})^2} \\\\
+&= \frac{1}{1 + e^{-z}} - \frac{1}{(1 + e^{-z})^2} \\\\
+&= \frac{1}{1 + e^{-z}} (1 - \frac{1}{1 + e^{-z}}) \\\\
+&= g(z) \cdot (1 - g(z))
+\end{aligned}
+$$
+
+and $\delta_i^{(L)}$ can be computed with the sigmoid function $g(z)$
+
+$$
+\begin{aligned}
+\delta_i^{(L)}
+&= \sum_{j = 1}^m \delta_i^{(L,j)} \\\\
+&= \sum_{j = 1}^m
+\frac{\partial \left\{ \sum_{i = 1}^{S_L}
+\left[ y^{(j)}_i \left(- \log \left( h_{\theta}(x^{(j)})_i \right) \right)
++ (1 - y^{(j)}_i) \left(- \log \left(1 - h_{\theta}(x^{(j)})_i \right) \right)
+\right] \right\} }
+{\partial z_i^{(L,j)}} \\\\
+&= \sum_{j = 1}^m
+\frac{\partial \left\{ \sum_{i = 1}^{S_L}
+\left[ y^{(j)}_i \left(- \log \left( g(z_i^{(L,j)}) \right) \right)
++ (1 - y^{(j)}_i) \left(- \log \left(1 - g(z_i^{(L,j)}) \right) \right)
+\right] \right\} }
+{\partial z_i^{(L,j)}} \\\\
+&= \sum_{j = 1}^m
+\frac{\partial \left\{
+y^{(j)}_i \left(- \log \left( g(z_i^{(L,j)}) \right) \right)
++ (1 - y^{(j)}_i) \left(- \log \left(1 - g(z_i^{(L,j)}) \right) \right)
+\right\}}{\partial z_i^{(L,j)}} \\\\
+&= \sum_{j = 1}^m \left[ 
+- y_i^{(j)} \frac{1}{g(z_i^{(L,j)})}g'(z_i^{(L,j)})
++ (1 - y_i^{(j)}) \cdot - \frac{1}{1 - g(z_i^{(L,j)})} \cdot - g'(z_i^{(L,j)})
+\right] \\\\
+&= \sum_{j = 1}^m \left[ 
+- y_i^{(j)} (1 - g(z_i^{(L,j)})) + (1 - y_i^{(j)}) g(z_i^{(L,j)})
+\right] \\\\
+&= \sum_{j = 1}^m \left[ 
+g(z_i^{(L,j)}) - y_i^{(j)} \right] \\\\
+&= \sum_{j = 1}^m \left[ 
+a_i^{(L,j)} - y_i^{(j)} \right] \\\\
+\end{aligned}
+$$
