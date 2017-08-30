@@ -77,7 +77,7 @@ $$
 p(y^{(i)}|x^{(i)}; \theta) = \frac{1}{\sqrt{2 \pi} \sigma} exp (- \frac{(y^{(i)} - \theta^T x^{(i)})^2}{2 \sigma^2})
 $$
 
-Thus the likelihood function $L(\theta) = L(\theta; X,\vec{y}) = p(\vec{y} \| X; \theta)$ can be written as
+Thus the likelihood function $L(\theta) = L(\theta; X,\overrightarrow{y}) = p(\overrightarrow{y} \| X; \theta)$ can be written as
 
 $$
 \begin{aligned}
