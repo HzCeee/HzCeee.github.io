@@ -11,7 +11,7 @@ image:
   creditlink:
 ---
 
-For the binary classification problem where $y \in \{ 0 , 1 \}$, use logistic regression ignoring the fact that $y$ is discrete-valued:
+For the binary classification problem where $y \in \\{ 0 , 1 \\}$, use logistic regression ignoring the fact that $y$ is discrete-valued:
 
 $$
 h_{\theta}(x) = g(\theta^T x) = \frac{1}{1 + e^{(- \theta^T x)}}
