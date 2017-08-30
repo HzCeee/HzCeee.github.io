@@ -86,7 +86,7 @@ L(\theta) &= \prod^m_{i = 1} p(y^{(i)} | x^{(i)}; \theta) \\\\
 \end{aligned}
 $$
 
-To simplize the calculatioin, instead of maximizeing $L(\theta)$, maximize the log likelihood $l(\theta)$:
+To simplize the calculatioin, instead of maximizing $L(\theta)$, maximize the log likelihood $l(\theta)$:
 
 $$
 \begin{aligned}
