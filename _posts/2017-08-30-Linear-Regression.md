@@ -1,3 +1,16 @@
+---
+layout: post
+title: "Linear Regression"
+author: "HzCeee"
+categories: Machine Learning
+tags: [ML Algorithm]
+image:
+  feature: 
+  teaser: 
+  credit:
+  creditlink:
+---
+
 Given a training set with $m$ training examples $\{ (x^{(i)}, y^{(i)}); i = 1, \cdots , m \}$ where $x^{(i)} = (x_1^{(i)}, x_2^{(i)}, \cdots , x_n^{(i)})^T$ and $y^{(i)}$ denotes the target variable, to learn a function $h : \mathcal{X} \mapsto \mathcal{Y}$ so that $h(x)$ is a good predictor for the corresponding value of $y$.
 
 Approximate $y$ as a linear function of $x$, then
@@ -95,7 +108,7 @@ J(\theta) &= \frac{1}{2} \sum_{i = 1}^m (y^{(i)} - \theta^T x^{(i)})^2 \\\\
 \end{aligned}
 $$
 
-1. Gradient Descent Algorithm
+** 1. Gradient Descent Algorithm **
 
 Starts with some initial $\theta$, and repeatedly performs the update to minimize $J(\theta)$:
 
@@ -123,7 +136,7 @@ $$
 \end{aligned}
 $$
 
-2. The Normal Equations
+** 2. The Normal Equations **
 
 This method performs the minimization explicitly and without resorting to an iterative algorithm.
 
