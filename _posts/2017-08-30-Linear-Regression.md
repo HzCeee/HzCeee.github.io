@@ -77,7 +77,7 @@ $$
 p(y^{(i)}|x^{(i)}; \theta) = \frac{1}{\sqrt{2 \pi} \sigma} exp (- \frac{(y^{(i)} - \theta^T x^{(i)})^2}{2 \sigma^2})
 $$
 
-Thus the likelihood function $L(\theta) = L(\theta; X,\overrightarrow{y}) = p(\overrightarrow{y} | X; \theta)$ can be written as
+Thus the likelihood function $L(\theta) = L(\theta; X,\vec{y}) = p(\vec{y} | X; \theta)$ can be written as
 
 $$
 \begin{aligned}
@@ -108,7 +108,7 @@ J(\theta) &= \frac{1}{2} \sum_{i = 1}^m (y^{(i)} - \theta^T x^{(i)})^2 \\\\
 \end{aligned}
 $$
 
-** 1. Gradient Descent Algorithm **
+**1. Gradient Descent Algorithm**
 
 Starts with some initial $\theta$, and repeatedly performs the update to minimize $J(\theta)$:
 
@@ -136,7 +136,7 @@ $$
 \end{aligned}
 $$
 
-** 2. The Normal Equations **
+**2. The Normal Equations**
 
 This method performs the minimization explicitly and without resorting to an iterative algorithm.
 
