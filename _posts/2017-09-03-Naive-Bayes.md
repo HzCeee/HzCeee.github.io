@@ -11,7 +11,7 @@ image:
   creditlink:
 ---
 
-Model $p(y|x)$ indirectly by modelling $p(x|y)$ and applying Bayes Rule:
+Model $p(y\left|\right.x)$ indirectly by modelling $p(x|y)$ and applying Bayes Rule:
 
 $$
 \begin{aligned}
