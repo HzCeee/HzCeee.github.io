@@ -11,7 +11,7 @@ image:
   creditlink:
 ---
 
-Model $p(y | x)$ indirectly by modelling $p(x | y)$ and applying Bayes Rule:
+Model $p(y \| x)$ indirectly by modelling $p(x\|y)$ and applying Bayes Rule:
 
 $$
 \begin{aligned}
@@ -56,7 +56,7 @@ $$
 \Sigma = \frac{1}{m} \sum_{i = 1}^m(x^{(i)} - \mu_{y^{(i)}})(x^{(i)} - \mu_{y^{(i)}})^T
 $$
 
-Thus, $p(y = 1 | x)$ can be derived as a function of $x$ with parameters above:
+Thus, $p(y = 1 \| x)$ can be derived as a function of $x$ with parameters above:
 
 $$
 \begin{aligned}
@@ -66,4 +66,4 @@ p(y = 1 | x) &= \frac{p(x | y = 1) p(y = 1)}{p(x | y = 1) p(y = 1) + p(x | y = 0
 \end{aligned}
 $$
 
-The decision boundary can be given at which $p(y = 1 | x) = 0.5$.
+The decision boundary can be given at which $p(y = 1 \| x) = 0.5$.
