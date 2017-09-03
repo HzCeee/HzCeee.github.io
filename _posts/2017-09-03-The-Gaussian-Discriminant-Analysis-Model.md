@@ -20,8 +20,6 @@ p(y | x) &= \frac{p(x | y) p(y)}{p(x)} \\\\
 \end{aligned}
 $$
 
-## The Gaussian Discriminant Analysis Model
-
 When the input features $x$ are continues-valued random variables, use the model:
 
 $$
