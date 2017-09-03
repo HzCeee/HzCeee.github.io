@@ -11,7 +11,7 @@ image:
   creditlink:
 ---
 
-Model $p(y | x)$ indirectly by modelling $p(x | y)$ and applying Bayes Rule:
+Model $p(y|x)$ indirectly by modelling $p(x|y)$ and applying Bayes Rule:
 
 $$
 \begin{aligned}
@@ -24,7 +24,7 @@ When the input features $x$ are discrete-valued random variables, use Naive Baye
 
 Consider building an email spam filter. Represent an email via a feature vector whose length $n$ is equal to the number of words in the dictionary. Specifically, if an email contains the $i$-th word of the dictionary, set $x_i = 1$; otherwise, $x_i = 0$.
 
-To model $p(x | y)$, assume that the $x_i$’s are conditionally independent given $y$ which means $p(x_i | y) = p(x_i | y, x_j)$ that is not the same as independent like $p(x_i) = p(x_i | x_j)$.
+To model $p(x|y)$, assume that the $x_i$’s are conditionally independent given $y$ which means $p(x_i|y) = p(x_i|y, x_j)$ that is not the same as independent like $p(x_i) = p(x_i|x_j)$.
 
 Thus,
 
@@ -37,7 +37,7 @@ p(x_1 | y) P(x_2 | y, x1) \cdots p(x_n | y, x_1, x_2, \cdots, x_{n - 1}) \\\\
 \end{aligned}
 $$
 
-Parameterized model by $\phi_{i | y = 1} = p(x_i = 1 | y = 1)$, $\phi_{i | y = 0} = p(x_i = 1 | y = 0)$, and $\phi_y = p(y = 1)$. Therefore the joint likelihood function is:
+Parameterized model by $\phi_{i|y = 1} = p(x_i = 1|y = 1)$, $\phi_{i|y = 0} = p(x_i = 1|y = 0)$, and $\phi_y = p(y = 1)$. Therefore the joint likelihood function is:
 
 $$
 \begin{aligned}
@@ -54,7 +54,7 @@ $$
 \phi_{y} = \frac{\sum_{i = 1}^m 1 \{ y^{(i)} = 1 \}}{m} \\\\
 $$
 
-Thus, p(y = 1 | x) can be derived as a function of x with parameters above:
+Thus, p(y = 1|x) can be derived as a function of x with parameters above:
 
 $$
 \begin{aligned}
@@ -67,6 +67,7 @@ $$
 Note that even if some original input attribute were continuous valued, it is common to discretetize it by turning into a small set of discrete values and apply Naive Bayes.
 
 **Lapalce Smoothing**
+
 Consider the possibility that $x_i$ is not included in any training examples, thus
 
 $$
@@ -74,7 +75,7 @@ $$
 \phi_{x_i | y = 0} = 0 \\\\
 $$
 
-Hence, $p(y = 1 | x) = \frac{0}{0}$ and can not make a prediction.
+Hence, $p(y = 1|x) = \frac{0}{0}$ and can not make a prediction.
 
 To avoid this, we can use Laplace smoothing: add 1 to the numerator and k to the denominator where k is the number of discrete values that $y$ can take. Therefore, obtain the following estimates of the parameters:
 
