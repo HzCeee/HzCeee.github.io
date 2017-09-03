@@ -11,8 +11,6 @@ image:
   creditlink:
 ---
 
-# Support Vector Machine
-
 Introduce a new notation for SVM: use $y \in \\{ -1, 1 \\}$ instead of $\\{ 0, 1 \\}$, let $w = [\theta_1, \theta_2, \cdots, \theta_n]^T$ and $b = \theta_0$. Thus,
 
 $$
@@ -29,9 +27,9 @@ g(z) =
 \end{cases}
 $$
 
-## Functional and Geometric Margins
+## 1. Functional and Geometric Margins
 
-### Functional Margins
+### 1.1 Functional Margins
 
 Given a training example $(x^{(i)} , y^{(i)})$, the functional margin of $(w,b)$ with respect to the training example is:
 
@@ -45,17 +43,17 @@ $$
 \hat \gamma = \min_{i = 1, \cdots, m} \hat \gamma ^ {(i)}
 $$
 
-### Geometric Margins
+### 1.2 Geometric Margins
 
 Note that $w$ is the normal vector to the separating hyperplane. 
 
 Use point $A$ to represent $x^{(i)}$ on the positive side and point $B$ to represent the point lying on the decision boundary, and satisfy:
 
 $$
-\overrightarrow{BA} // \vec{w}
+\overrightarrow{BA} // \overrightarrow{w}
 $$
 
-Therefore $B$ is given by $x^{(i)} - \gamma^{(i)} \cdot w / \|w\|$ . Hence,
+Therefore $B$ is given by $x^{(i)} - \gamma^{(i)} \cdot w / \\|w\\|$ . Hence,
 
 $$
 w^T (x^{(i)} - \gamma^{(i)} \frac{w}{\|w\|}) + b = 0
@@ -67,7 +65,7 @@ $$
 \gamma^{(i)} = (\frac{w}{\|w\|})^T x^{(i)} + \frac{b}{\|w\|}
 $$
 
-Similarly, use point $A$ to represent $x^{(i)}$ on the negative side, therefore $B$ is the same point as mentioned above. Therefore $B$ is given by $x^{(i)} + \gamma^{(i)} \cdot w / \|w\|$. Hence,
+Similarly, use point $A$ to represent $x^{(i)}$ on the negative side, therefore $B$ is the same point as mentioned above. Therefore $B$ is given by $x^{(i)} + \gamma^{(i)} \cdot w / \\|w\\|$. Hence,
 
 $$
 w^T (x^{(i)} + \gamma^{(i)} \frac{w}{\|w\|}) + b = 0
@@ -91,13 +89,13 @@ $$
 \gamma = \min_{i = 1, \cdots, m} \gamma ^ {(i)}
 $$
 
-## The Optimal Margin Classifier
+## 2. The Optimal Margin Classifier
 
-### Problem Formulation
+### 2.1 Problem Formulation
 
-#### Linearly Separable Case
+#### 2.1.1 Linearly Separable Case
 
-##### Original Problem
+##### 2.1.1.1 Original Problem
 
 Given a training set that is linearly separable using some separating hyperplane. To find the one that achieves the maximum geometric margin, pose the following optimization problem:
 
@@ -109,7 +107,7 @@ s.t. & \quad y^{(i)} (w^T x^{(i)} + b) \geq \gamma, i = 1, \cdots, m \\\\
 \end{aligned}
 $$
 
-However, it could not be solved by the standard optimization software because of the constraint $\|w\| = 1$. So, it can be tranformed into a nicer one with the property that $\gamma = \hat \gamma / \|w\|$:
+However, it could not be solved by the standard optimization software because of the constraint $\|w\| = 1$. So, it can be tranformed into a nicer one with the property that $\gamma = \hat \gamma / \\|w\\|$:
 
 $$
 \begin{aligned}
@@ -118,13 +116,13 @@ s.t. & \quad y^{(i)} (w^T x^{(i)} + b) \geq \hat \gamma, i = 1, \cdots, m \\\\
 \end{aligned}
 $$
 
-However the objective function $\frac{\hat \gamma}{\|w\|}$ is non-convex. Consider the fact that we can add arbitrary scaling constraint on $w$ and $b$ without changing the constraint because $\hat \gamma ^{(i)} = y^{(i)} (w^T x ^{(i)} + b)$. Thus, we can introduce the specfic scaling constraint so that
+However the objective function $\frac{\hat \gamma}{\\|w\\|}$ is non-convex. Consider the fact that we can add arbitrary scaling constraint on $w$ and $b$ without changing the constraint because $\hat \gamma ^{(i)} = y^{(i)} (w^T x ^{(i)} + b)$. Thus, we can introduce the specfic scaling constraint so that
 
 $$
 \hat \gamma = 1
 $$
 
-Therefore maximizing  $\frac{\hat \gamma}{\|w\|} = \frac{1}{\|w\|}$ is the same thing as minimizing $\|w\|^2$, so the original problem can be transformed as:
+Therefore maximizing  $\frac{\hat \gamma}{\\|w\\|} = \frac{1}{\\|w\\|}$ is the same thing as minimizing $\\|w\\|^2$, so the original problem can be transformed as:
 
 $$
 \begin{aligned}
@@ -135,7 +133,7 @@ $$
 
 And now this optimization problem can be solved using commercial quadratic programming code.
 
-##### Dual Problem
+##### 2.1.1.2 Dual Problem
 
 The constraints can be written as:
 
@@ -179,9 +177,9 @@ s.t. & \quad \alpha_i \geq 0, i = 1, \cdots, m \\\\
 \end{aligned}
 $$
 
-#### Non-Linearly Separable Case
+#### 2.1.2 Non-Linearly Separable Case
 
-##### Original Problem
+##### 2.1.2.1 Original Problem
 
 To make the algorithm work for non-linearly separable datasets as well as be less sensitive to outliers, reformulate our optimization as follows:
 
@@ -195,7 +193,7 @@ $$
 
 Thus, examples are now permitted to have (functional) margin less than 1, and if an example has functional margin $1 − \xi_i$, we would pay a cost of the objective function being increased by $C \xi_i$.
 
-##### Dual Problem
+##### 2.1.2.2 Dual Problem
 
 The Lagrangian is:
 
@@ -213,7 +211,7 @@ s.t. & \quad 0 \geq \alpha_i \geq C, i = 1, \cdots, m \\\\
 \end{aligned}
 $$
 
-### Sequential Minimal Optimization(SMO) Algorithm
+### 2.2 Sequential Minimal Optimization(SMO) Algorithm
 
 For the two dual problems above, after finding $\alpha$ that maximize $W(\alpha)$ subject to the constraints, $w$ can be derived by $\nabla_w \mathcal{L} (w, b, \alpha) = w - \sum_{i = 1}^m \alpha_i y^{(i)} x^{(i)} = 0$ and $b$ can also be found by considering the primal problem directly. Thus, we can make a prediction by $y = h_{w, b} (x) = g(w^T x + b)$ where $g(z) = 1$ if $z \geq 0$ and $g(z) = -1$ otherwise.
 
