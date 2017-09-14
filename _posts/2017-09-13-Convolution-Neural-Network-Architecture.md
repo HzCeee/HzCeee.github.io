@@ -164,3 +164,9 @@ DepthConcat [28x28x256]
 - GoogLeNet Architecture
 
 ![GoogLeNet Architecture](https://ws4.sinaimg.cn/large/006tKfTcgy1fjik3lpld7j31kw10j134.jpg)
+
+# ResNet
+
+- ResNet Architecture
+
+![ResNet Architecture](https://ws4.sinaimg.cn/large/006tKfTcgy1fjivxjj7hlj31kw0lv44i.jpg)
