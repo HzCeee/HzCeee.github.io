@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Naive Bayes"
+title: "Spam Filter"
 author: "HzCeee"
 categories: Machine Learning
 tags: [Generative Learning Algorithm]
