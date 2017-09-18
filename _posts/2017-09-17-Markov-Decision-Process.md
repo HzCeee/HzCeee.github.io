@@ -88,7 +88,7 @@ __Markov Decision Process__
 
 A Markov Decision Process is a tuple $\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$ where $\mathcal{S}$ is a finite set of states, $\mathcal{A}$ is a finite set of actions, $\mathcal{P}$ is a state transition probability matrix ($\mathcal{P}\_{ss'}^a = \mathbb{P}[S_{t + 1} = s' \| S_t = s, A_t = a]$), $\mathcal{R}$ is a reward function ($\mathcal{R}\_s^a = \mathbb{E}[R_{t + 1} \| S_t = s, A_t = a]$) and $\mathcal{\gamma}$ is a discount factor ($\mathcal{\gamma} \in \[0, 1\]$).
 
-Action $a$ is determined by policy $\pi(a | s) = \mathbb{P}[A_t = a | S_t = s]$ which indicates the probability of possible action $a \in \mathcal{A}(s)$ in state $s$.
+Action $a$ is determined by policy $\pi(a \| s) = \mathbb{P}[A_t = a \| S_t = s]$ which indicates the probability of possible action $a \in \mathcal{A}(s)$ in state $s$.
 
 The state and reward sequence $S_1, R_2, S_2, \cdots$ is a Markov Reward Process $\langle \mathcal{S}, \mathcal{P}^{\pi}, \mathcal{R}^{\pi}, \gamma \rangle$ where
 
