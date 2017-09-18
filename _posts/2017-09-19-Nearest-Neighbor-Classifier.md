@@ -49,17 +49,7 @@ For fixed $k$, as and $n \to \infty$, $k$-NN classifier error converges to no mo
 
 > __1-NN case__
 >
-> __Notation:__
-> \\\
-> $P[e]$ = NN error rate
-> \\\
-> $D_n = (X_n, Y_n)$ = labeled training data (size n)
-> \\\
-> $x_n$ = nearset neighbour of $x_t$ in $D_n$
-> \\\
-> $y_n$ = label of the nearest neighbor
-> \\\
-> $P^{*}[e]$ = Bayes error rate
+> __Notation:__ $P[e]$ = NN error rate; $D_n = (X_n, Y_n)$ = labeled training data (size n); $x_n$ = nearset neighbour of $x_t$ in $D_n$; $y_n$ = label of the nearest neighbor; $P^{*}[e]$ = Bayes error rate
 >
 > $$
 > \begin{aligned}
