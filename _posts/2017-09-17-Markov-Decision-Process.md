@@ -13,11 +13,12 @@ image:
 
 __Markov Reward Process__
 
-A Markov Reward Process is a tuple $\langle \mathcal{S}, \mathcal{P}, \mathcal{R}, \mathcal{\gamma} \rangle$ where $\mathcal{S}$ is a finite set of states, $\mathcal{P}$ is a state transition probability matrix ($\mathcal{P}_{ss'} = \mathbb{P}[S_{t + 1} = s' | S_t = s]$), $\mathcal{R}$ is a reward function ($\mathcal{R}_s = \mathbb{E}[R_{t + 1} | S_t = s]$) and $\mathcal{\gamma}$ is a discount factor ($\mathcal{\gamma} \in [0, 1]$).
+A Markov Reward Process is a tuple $\langle \mathcal{S}, \mathcal{P}, \mathcal{R}, \mathcal{\gamma} \rangle$ where $\mathcal{S}$ is a finite set of states, $\mathcal{P}$ is a state transition probability matrix ($\mathcal{P}\_{ss'} = \mathbb{P}[S_{t + 1} = s' | S_t = s]$), $\mathcal{R}$ is a reward function ($\mathcal{R}\_s = \mathbb{E}[R_{t + 1} | S_t = s]$) and $\mathcal{\gamma}$ is a discount factor ($\mathcal{\gamma} \in [0, 1]$).
 
 Each state $s_t$ can be mapped to a reward $R_t$.
 
 Return $G_t$ is the total discounted reward $R_t$ from time-step $t$:
+
 $$
 G_t = R_{t + 1} + \gamma R_{t + 2} + \cdots = \sum_{k = 0}^\infty \gamma^k R_{t + k + 1}
 $$
@@ -43,6 +44,7 @@ $$
 $$
 
 Specifically,
+
 $$
 \begin{bmatrix}
 v(1) \\
@@ -51,16 +53,16 @@ v(n)
 \end{bmatrix}
 =
 \begin{bmatrix}
-\mathcal{R}_1 \\
+\mathcal{R}\_1 \\
 \vdots \\
-\mathcal{R}_n
+\mathcal{R}\_n
 \end{bmatrix}
 +
 \gamma
 \begin{bmatrix}
-\mathcal{P}_{11} & \cdots & \mathcal{P}_{1n} \\
+\mathcal{P}\_{11} & \cdots & \mathcal{P}\_{1n} \\
 \vdots & & \vdots \\ 
-\mathcal{P}_{n1} & \cdots & \mathcal{P}_{nn} \\
+\mathcal{P}\_{n1} & \cdots & \mathcal{P}\_{nn} \\
 \end{bmatrix}
 \begin{bmatrix}
 v(1) \\
@@ -84,7 +86,7 @@ $$
 
 __Markov Decision Process__
 
-A Markov Decision Process is a tuple $\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$ where $\mathcal{S}$ is a finite set of states, $\mathcal{A}$ is a finite set of actions, $\mathcal{P}$ is a state transition probability matrix ($\mathcal{P}_{ss'}^a = \mathbb{P}[S_{t + 1} = s' | S_t = s, A_t = a]$), $\mathcal{R}$ is a reward function ($\mathcal{R}_s^a = \mathbb{E}[R_{t + 1} | S_t = s, A_t = a]$) and $\mathcal{\gamma}$ is a discount factor ($\mathcal{\gamma} \in [0, 1]$).
+A Markov Decision Process is a tuple $\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$ where $\mathcal{S}$ is a finite set of states, $\mathcal{A}$ is a finite set of actions, $\mathcal{P}$ is a state transition probability matrix ($\mathcal{P}\_{ss'}^a = \mathbb{P}[S_{t + 1} = s' | S_t = s, A_t = a]$), $\mathcal{R}$ is a reward function ($\mathcal{R}\_s^a = \mathbb{E}[R_{t + 1} | S_t = s, A_t = a]$) and $\mathcal{\gamma}$ is a discount factor ($\mathcal{\gamma} \in [0, 1]$).
 
 Action $a$ is determined by policy $\pi(a | s) = \mathbb{P}[A_t = a | S_t = s]$ which indicates the probability of possible action $a \in \mathcal{A}(s)$ in state $s$.
 
@@ -137,6 +139,7 @@ $$
 __Optimal Value Function__
 
 The optimal state-value function:
+
 $$
 v_{*}(s) = \max_{\pi} v_{\pi}(s)
 $$
