@@ -52,9 +52,13 @@ For fixed $k$, as and $n \to \infty$, $k$-NN classifier error converges to no mo
 > __Notation:__
 >
 > $P[e]$ = NN error rate
+> 
 > $D_n = (X_n, Y_n)$ = labeled training data (size n)
+> 
 > $x_n$ = nearset neighbour of $x_t$ in $D_n$
+> 
 > $y_n$ = label of the nearest neighbor
+> 
 > $P^{*}[e]$ = Bayes error rate
 >
 > $$
@@ -122,7 +126,7 @@ __Improvement__
     \end{bmatrix}
     $$
 
-    Create two set: Similar set $S := \\{ (x_i, x_j) | y_i = y_j \\}$ and Dissimilar set $D := \\{ (x_i, x_j) | y_i \neq y_j \\}$
+    Create two set: Similar set $S := \\{ (x_i, x_j) \| y_i = y_j \\}$ and Dissimilar set $D := \\{ (x_i, x_j) \| y_i \neq y_j \\}$
 
     Define Cost function $\Psi(w)$ and minimize $\Psi(x)$ with respect to $w$:
 
