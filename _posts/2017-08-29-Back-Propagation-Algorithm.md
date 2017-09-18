@@ -3,7 +3,7 @@ layout: post
 title: "Back Propagation Algorithm"
 author: "HzCeee"
 categories: Machine Learning
-tags: [Nerual Network]
+tags: [Neural Network]
 image:
   feature: 
   teaser: 
