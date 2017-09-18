@@ -85,7 +85,7 @@ $$
 \sigma^2 =\frac{1}{n} \sum_{i = 1}^n (\boldsymbol{x}_i - \mu)^2
 $$
 
-Then use the parameter $\theta =\\{ \mu, \sigma^2 \\}$ and predict with classifier $\hat{f}(\boldsymbol{x}) = \mathop{\arg \max}_{y \in \mathcal{Y}} P_\theta [X = \boldsymbol{x} \| Y = y] \cdot P[Y = y] $ 
+Then use the parameter $\theta = \\{ \mu, \sigma^2 \\}$ and predict with classifier $\hat{f}(\boldsymbol{x}) = \mathop{\arg \max}_{y \in \mathcal{Y}} P\_\theta [X = \boldsymbol{x} \| Y = y] \cdot P[Y = y] $ 
 
 ---
 
