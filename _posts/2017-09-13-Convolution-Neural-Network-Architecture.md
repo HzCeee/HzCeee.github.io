@@ -1,3 +1,16 @@
+---
+layout: post
+title: "Convolutional Neural Network Architecture"
+author: "HzCeee"
+categories: Machine Learning
+tags: [Neural Network]
+image:
+  feature: 
+  teaser:
+  credit:
+  creditlink:
+---
+
 # AlexNet
 
 - Parameters
