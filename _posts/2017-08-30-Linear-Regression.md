@@ -184,10 +184,10 @@ $$
 \begin{aligned}
 \nabla_{\theta}J(\theta) &=
 \nabla_{\theta} \frac{1}{2} (X \theta - \overrightarrow{y})^T(X \theta - \overrightarrow{y}) \\\\
+& = \frac{1}{2} \nabla_\theta (\theta^T X^T - \overrightarrow{y}^T) (X \theta - \overrightarrow{y}) \\\\
 &= \frac{1}{2} \nabla_{\theta}(\theta^T X^T X \theta - \theta^T X^T \overrightarrow{y} - \overrightarrow{y} X \theta + \overrightarrow{y}^T \overrightarrow{y}) \\\\
-&= \frac{1}{2} \nabla_{\theta} tr(\theta^T X^T X \theta - \theta^T X^T \overrightarrow{y} - \overrightarrow{y} X \theta + \overrightarrow{y}^T \overrightarrow{y}) \\\\
-&= \frac{1}{2} \nabla_{\theta} (tr \theta^T X^T X \theta - 2 tr \overrightarrow{y}^T X \theta) \\\\
-&= \frac{1}{2} (X^T X \theta + X^T X \theta - 2 X^T \overrightarrow{y}) \\\\
+&= \frac{1}{2} \nabla_{\theta} (\theta^T X^T X \theta - 2 \theta^T X^T \overrightarrow{y} + \overrightarrow{y}^T \overrightarrow{y}) \\\\
+& = \frac{1}{2} \left[ (2 X^T X) \theta - 2 X^T \overrightarrow{y} \right] \\\\
 &= X^T X \theta - X^T \overrightarrow{y}
 \end{aligned}
 $$
